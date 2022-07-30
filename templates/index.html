@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+    <style>
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+    </style>
+
+    <title>Password generator</title>
+
+
+</head>
+
+<h1 class="center">Password Generator</h1>
+<br>
+<h3 class="center"> Password:</h3>
+    <div class="output">
+        <!-- make uneditable box to diplay output in-->
+        <!-- add output-->
+        <textarea name="output" class="form-control" readonly>{{password}}  </textarea>
+        <!-- form with a slider from 4-8 -->
+    </div>
+    <div class="center">
+        <form action="/generate" method="post">
+            <form method="POST" action="test">
+                <input type="range" min="1" max="10" name="length" value="{{length}}"  oninput="this.nextElementSibling.value = this.value"/>
+                <output class="center">Amount of words: {{value}}</output>
+                <br>
+                <button type="submit" class="btn btn-primary" name="generate" class="center">Generate</button>
+            </form>
+            </div>
