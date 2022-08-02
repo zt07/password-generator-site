@@ -2,7 +2,7 @@ from english_words import english_words_set as words
 from random import choice
 
 
-words = [word for word in words if len(word) <= 5]
+words = filter(lambda word: word<=5, words)
 #Penis
 
 
