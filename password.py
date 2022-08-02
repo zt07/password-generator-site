@@ -7,6 +7,7 @@ words = list(filter(lambda x: len(x) < 5, words))
 
 
 
+
 # Generate a random password of the given length
 def generate_password(length):
     password = ''
