@@ -1,9 +1,8 @@
-from english_words import english_words_set as words
+from english_words import english_words_alpha_set as words
 from random import choice
 
 
-words = filter(lambda word: word<=5, words)
-#Penis
+words = list(filter(lambda x: len(x) < 5, words))
 
 
 
