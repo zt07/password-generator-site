@@ -1,18 +1,17 @@
-from english_words import english_words_alpha_set as words
 from random import choice
+from english_words import get_english_words_set as words
 
 
-words = list(filter(lambda x: len(x) < 5, words))
-
-
-
+set = words(['web2'])
+#only 5 letter words or less are allowed
+words = [word for word in set if len(word) <= 5]
 
 
 # Generate a random password of the given length
 def generate_password(length):
+    # Generate a random password of random words that is less then the given length in total
     password = ''
-    for i in range(length):
-        password += choice(words)
-        password+= ' '
-    return password
-
+    while True:
+        password += choice(words) + '-'
+        if len(password) >= length:
+            return password[:-5]

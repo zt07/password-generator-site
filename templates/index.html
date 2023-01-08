@@ -33,7 +33,7 @@
     <div class="center">
         <form action="/generate" method="post">
             <form method="POST" action="test">
-                <input type="range" min="1" max="10" name="length" value="{{length}}"  oninput="this.nextElementSibling.value = this.value"/>
+                <input type="range" min="9" max="30" name="length" value="{{length}}"  oninput="this.nextElementSibling.value = this.value"/>
                 <output class="center">Amount of words: {{value}}</output>
                 <br>
                 <button type="submit" class="btn btn-primary" name="generate" class="center">Generate</button>
